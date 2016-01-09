@@ -1,23 +1,44 @@
 ---
 layout: default
 ---
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="card z-depth-2">
+  <h1 class="header orange-text">{{ site.title }}</h1>
+  <div class="row">
+    <h5 class="header col s12 light">{{ site.description }}</h5>
+  </div>
 </div>
+<div class="section">
+  <!--   Icon Section   -->
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="icon-block">
+        <h5 class="center">Jekyll</h5>
+
+        <p class="light">Jekyll helps you transform your plain text into static websites and blogs.</p>
+      </div>
+    </div>
+
+    <div class="col s12 m6">
+      <div class="icon-block">
+        <h5 class="center">Materialize.css</h5>
+        <p class="light">Materialize.css is a modern responsive front-end framework based on Material Design</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="row center">
+        <a href="http://jekyllrb.com/" id="download-button" class="btn-large waves-effect waves-light orange">Get Jekyll</a>
+      </div>
+    </div>
+    <div class="col s12 m6">
+      <div class="row center">
+        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Materialize</a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+</div>
+
+{% include contact.html %}
